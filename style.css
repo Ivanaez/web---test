@@ -11,9 +11,12 @@
 
 
 .box {
-    width: 260px;
-    margin: auto;
+  width: 100%;
+  max-width: 260px;
+  margin: auto;
+  padding: 16px;
 }
+
 
 label {
     display: block;
@@ -53,5 +56,16 @@ button:hover {
   height: 70px;
   background-color: #f2f2f2;
 }
+
+@media (min-width: 768px) {
+  .box {
+    max-width: 320px;
+  }
+
+  .main-header {
+    height: 70px;
+  }
+}
+
 
 
