@@ -18,15 +18,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
+                                    /* Header */
 .main-header {
-  position :relative;
+  
   display : flex;
   align-items: center;
+  justify-content: space-between;
   height: 56px;
   background-color: #ffffff;
   padding:0 16px 0 5px;
-
+  position: relative;
+  z-index:10;
  }
 
                            /* Menu toggle button (left side) */
@@ -39,7 +41,7 @@ body {
   color: #333;
   
 }
-
+                              /* Navigation Menu (sliding from left) */
 .menu {
   position: fixed;
   inset : 0 auto 0 0;
@@ -72,13 +74,25 @@ body {
                               /* Logo (center) */
                               
 .logo {
-  position:absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 48px;        
+  
+  
+  height: 52px;        
   width: auto;
   
 }
+.logo-link {
+  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)translateY(10px);
+    
+    align-items: center;
+    z-index: 20;
+}
+
+
+
 
 
                       /* Header tools (icons right side) */
@@ -107,27 +121,69 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-
-                                   /* Tablet */
-@media (min-width: 768px) {
-  .main-header {
-    height: 70px;
-  }
-}
-
-                                   /* Desktop */
+                              /* Desktop layout */
 @media (min-width: 1024px) {
-  .main-header {
-    height: 75px;
+
+  
+  .button-toggle {
+    display: none;
+  }
+  .logo-link {
+    position: static;
+    transform: none;
+    margin-left: 16px;
+    
+  }
+  .logo {
+    height: 46px;
+    width: auto;
+  }
+
+  
+  .menu {
+    position: static;
+    inset: auto;
+    transform: none;
+    width: auto;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+
+
+
+  }
+  .menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    
+  }
+
+ 
+  .menu ul {
+    display: flex;
+    gap: 24px;
+  }
+  .header-tools{
+    gap: 20px;  
+  }
+  .menu li:nth-child(4),
+  .menu li:nth-child(5) {
+    display: none;
   }
 }
-                                 /* Large Desktop */
-@media (min-width: 1536px) {
-  .main-header {
-    height: 95px; /* usually enough */
-  }
-}
+ 
+
+  
+  
+
+
+
+                                   
+
+                                   
+
 
 
 
