@@ -67,19 +67,7 @@ body {
   padding: 8px 12px;
   cursor: pointer;
 }
-
-.menu li:hover {
-  background-color: #eee;
-}
                               /* Logo (center) */
-                              
-.logo {
-  
-  
-  height: 52px;        
-  width: auto;
-  
-}
 .logo-link {
   
     position: absolute;
@@ -89,10 +77,11 @@ body {
     
     align-items: center;
     z-index: 20;
+}                           
+.logo {
+  height: 52px;        
+  width: auto;
 }
-
-
-
 
 
                       /* Header tools (icons right side) */
@@ -106,28 +95,62 @@ body {
 .icon-btn {
   text-decoration: none;   
   color: #000;             
-  font-size: 22px;
+  font-size: 20px;
+}
+.user-btn i {
+ color: #d80000;
+}
+.user-text {
+  display: none;
 }
 
-.icon-btn:hover {
-  opacity: 0.7;             
-}
 
 
                                /* Main Content */
 .main-content {
   flex: 1;
-  background-image: url("../img/main-background.PNG");
+  background-image: url("../img/background.png");
   background-size: cover;
   background-position: center;
+  display : flex;
+  justify-content: center;
 }
+
+.page-window {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px ; 
+}
+.hero{
+ 
+  width: 100%;
+  height: clamp(180px, 35vw, 460px); /* min, responsive, max */
+  border-radius: 14px;
+  overflow: hidden;
+}
+ 
+.hero-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+
                               /* Desktop layout */
 @media (min-width: 1024px) {
 
-  
+                         /* Menu toggle button (left side)- desktop */
   .button-toggle {
     display: none;
+    
   }
+                                /* Logo-desktop */
   .logo-link {
     position: static;
     transform: none;
@@ -138,8 +161,9 @@ body {
     height: 46px;
     width: auto;
   }
-
   
+
+                             /* Navigation Menu-desktop */
   .menu {
     position: static;
     inset: auto;
@@ -149,6 +173,7 @@ body {
     border: none;
     padding: 0;
     margin-left: auto;
+    
 
 
 
@@ -156,26 +181,48 @@ body {
   .menu a {
     text-decoration: none;
     color: #000;
-    font-weight: 500;
-    
+    font-weight: 700;
   }
 
- 
   .menu ul {
     display: flex;
-    gap: 24px;
+    gap: 50px;
   }
+  .menu li:hover {
+ 
+  opacity: 0.6;
+}
+ 
+                            /* Header tools (icons right side) - desktop */
   .header-tools{
     gap: 20px;  
   }
+  .user-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+  .user-text {
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 600;
+    
+  }
+  .user-text:hover {
+    opacity: 0.6;
+  }
+                             /* Hide menu items 4 and 5 on - desktop */
   .menu li:nth-child(4),
   .menu li:nth-child(5) {
     display: none;
   }
 }
- 
+                                  /* Main Content - desktop*/
 
-  
+  .hero{
+    height: clamp(260px, 22vw, 360px); 
+  }
+
   
 
 
