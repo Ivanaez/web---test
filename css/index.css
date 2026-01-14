@@ -116,33 +116,54 @@ body {
   justify-content: center;
 }
 
-.page-window {
+                              /* Main Container */
+ .main-container{
   width: 100%;
-  max-width: 1200px;
-  margin: 24px ; 
+  padding: clamp(18px, 4vw, 28px);
+  box-sizing: border-box;
 }
-.hero{
- 
-  width: 100%;
-  height: clamp(180px, 35vw, 460px); /* min, responsive, max */
-  border-radius: 14px;
-  overflow: hidden;
-}
- 
-.hero-image{
-  width: 100%;
-  height: 100%;
+
+
+                                 /* Banner-images */
+ .banner-image{
+  width: min(100%, 1200px);  
+  margin: 0 auto;            
+  aspect-ratio: 21/9;
+  height: auto;
   object-fit: cover;
+  object-position: center;
   display: block;
+
+  border-radius: 12px;
+  border: 5px solid rgba(242, 242, 242, 0.12);
+  box-shadow: 0 10px 20px rgba(198, 197, 197, 0.5);
+  overflow: hidden;
+ }
+
+  /* Banner wrapper (positioning context for overlay content) */
+.banner-wrap{
+  position: relative;
+}
+.banner-buttons{
+  position: absolute;
+  left: 20px;
+  top: 90px;
+}
+.banner-text{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
 }
 
 
 
 
+/*--------------------------------------------------------------------------- */
+
+                             /* desktop layout */
 
 
-
-                              /* Desktop layout */
 @media (min-width: 1024px) {
 
                          /* Menu toggle button (left side)- desktop */
@@ -216,13 +237,22 @@ body {
   .menu li:nth-child(5) {
     display: none;
   }
-}
-                                  /* Main Content - desktop*/
 
-  .hero{
-    height: clamp(260px, 22vw, 360px); 
+   .main-container{
+    
+    padding-top: 5px;
+   }
+
+  .banner-image{
+   
+   max-height: 250px;
+
   }
+  
 
+
+                                        /* End*/
+}
   
 
 
