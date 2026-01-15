@@ -73,13 +73,12 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%)translateY(10px);
-    
-    align-items: center;
+    transform: translate(-50%, -50%);
     z-index: 20;
+
 }                           
 .logo {
-  height: 52px;        
+  height: 42px;        
   width: auto;
 }
 
@@ -109,59 +108,74 @@ body {
                                /* Main Content */
 .main-content {
   flex: 1;
-  background-image: url("../img/background.png");
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   display : flex;
   justify-content: center;
+  
 }
 
                               /* Main Container */
  .main-container{
   width: 100%;
-  padding: clamp(18px, 4vw, 28px);
+  padding: 1px 2px;
   box-sizing: border-box;
+
+}
+        /* Banner wrapper (positioning context for overlay content) */
+
+.banner-wrap{
+  position: relative;
+  width: min(100%, 1200px);  
+  margin: 0 auto;  
 }
 
-
-                                 /* Banner-images */
+                                 /* Banner-Images */
  .banner-image{
-  width: min(100%, 1200px);  
-  margin: 0 auto;            
+  width: 100%;  
+  display: block;            
   aspect-ratio: 21/9;
-  height: auto;
+  height: clamp(200px, 30vw, 280px);
   object-fit: cover;
   object-position: center;
-  display: block;
 
-  border-radius: 12px;
+  border-radius: 20px;
   border: 5px solid rgba(242, 242, 242, 0.12);
   box-shadow: 0 10px 20px rgba(198, 197, 197, 0.5);
   overflow: hidden;
  }
-
-  /* Banner wrapper (positioning context for overlay content) */
-.banner-wrap{
-  position: relative;
-}
-.banner-buttons{
+                             /* Banner-Text */
+  .banner-text{
   position: absolute;
-  left: 20px;
-  top: 90px;
-}
-.banner-text{
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  inset: 20px;
   color: #fff;
+  
 }
+                            /* Banner-Buttons */
+.banner-buttons{
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+                      /* Rotating banner text (text-1 / text-2) */
+.rotator{
+display: none;
+
+}
+
+
 
 
 
 
 /*--------------------------------------------------------------------------- */
 
-                             /* desktop layout */
+                             /* Desktop Layout */
 
 
 @media (min-width: 1024px) {
