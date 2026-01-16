@@ -146,9 +146,11 @@ body {
   overflow: hidden;
  }
                              /* Banner-Text */
-  .banner-text{
-  position: absolute;
+  
+  
+                             .banner-text{
   display: flex;
+  position: absolute;
   flex-direction: column;
   gap: 12px;
   inset: 20px;
@@ -174,8 +176,93 @@ display: none;
 
 
 /*--------------------------------------------------------------------------- */
+                           
 
-                             /* Desktop Layout */
+                             /* TABLET – 768px - 1023px */
+
+ 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+                               /* Main-container */
+  .main-container{
+    padding: 10px 14px;
+  }
+                              /* Tablet-Wrap */
+  .banner-wrap{
+    display: flex;
+    align-items: stretch;
+    height: clamp(250px, 28vw, 300px);
+
+    border: 1px solid rgba(36, 36, 36, 0.12);
+    box-shadow: 0 8px 16px rgba(198, 197, 197, 0.5);
+    border-radius: 15px;
+    overflow: hidden; 
+  }
+
+  
+  .banner-text{
+    display: flex;    
+    flex-direction: column;  
+    position: relative;     
+    inset: auto;            
+    flex: 0 0 40%;
+    padding: 32px;
+    
+    justify-content: center;
+    gap: 14px;
+    background: #f3f1ee;
+    color: #3a2b20;
+    z-index: 2;
+    order: 1;               
+        
+  }
+
+                                /* Right: image */
+
+  .banner-image{
+    flex: 0 0 60%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    order: 2;           
+    
+     border-radius: 0;
+    border: 0;
+    box-shadow: none
+  }
+
+                                /* Banner buttons - tablet */
+  .banner-buttons{
+    
+    margin-top: auto;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+                                /* Decorative skewed element */
+  .banner-text::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;           
+    width: 140px;
+    height: 100%;
+    background: #f3f1ee;    
+    transform: skewX(-12deg);
+    transform-origin: left top;
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+
+}
+  
+
+
+                               /* End*/
+/*-------------------------------------------------------------------------- */
+                             /* Desktop-1024px */
 
 
 @media (min-width: 1024px) {
