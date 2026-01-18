@@ -157,18 +157,37 @@ body {
   color: #fff;
   
 }
-                            /* Banner-Buttons */
+                          /* Banner-Buttons */
 .banner-buttons{
   margin-top: auto;
   display: flex;
-  gap: 10px;
+  gap: 17px;
   flex-wrap: wrap;
 }
-                      /* Rotating banner text (text-1 / text-2) */
-.rotator{
-display: none;
-
+.btn-order{
+  padding: 6px ;
+  background-color: #c90000;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  
 }
+.btn-menu{
+  padding: 6px ;
+  background: rgba(255, 255, 255, 0.25); 
+  color: #222;
+  border: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 900;
+}
+                     
+
 
 
 
@@ -192,12 +211,13 @@ display: none;
   .banner-wrap{
     display: flex;
     align-items: stretch;
-    height: clamp(250px, 28vw, 300px);
+    height: clamp(250px, 28vw, 290px);
 
     border: 1px solid rgba(36, 36, 36, 0.12);
     box-shadow: 0 8px 16px rgba(198, 197, 197, 0.5);
     border-radius: 15px;
     overflow: hidden; 
+    
   }
 
   
@@ -208,17 +228,16 @@ display: none;
     inset: auto;            
     flex: 0 0 40%;
     padding: 32px;
-    
+    background: #f3f1ee;   
     justify-content: center;
     gap: 14px;
-    background: #f3f1ee;
-    color: #3a2b20;
-    z-index: 2;
+    
+    color: #010101;
     order: 1;               
         
   }
 
-                                /* Right: image */
+                    /* Right: image */
 
   .banner-image{
     flex: 0 0 60%;
@@ -226,21 +245,25 @@ display: none;
     height: 100%;
     object-fit: cover;
     order: 2;           
-    
-     border-radius: 0;
+    border-radius: 0;
     border: 0;
     box-shadow: none
   }
 
-                                /* Banner buttons - tablet */
+                      /* Banner buttons - tablet */
   .banner-buttons{
     
     margin-top: auto;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
-                                /* Decorative skewed element */
+  .banner-text > * {
+  position: relative;
+  z-index: 1;
+}
+
+                    /* Decorative skewed element */
   .banner-text::after{
     content: "";
     position: absolute;
@@ -251,9 +274,19 @@ display: none;
     background: #f3f1ee;    
     transform: skewX(-12deg);
     transform-origin: left top;
-    z-index: 3;
+    z-index: 0;
     pointer-events: none;
+    
   }
+  .btn-order{
+    
+    padding : 15px ;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.40);
+    
+  }
+ 
+    
   
 
 }
