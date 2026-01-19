@@ -34,7 +34,6 @@ body {
                            /* Menu toggle button (left side) */
 .button-toggle {
   font-size: 35px;
-  
   background: none;
   border: none;
   cursor: pointer;
@@ -121,13 +120,14 @@ body {
   width: 100%;
   padding: 1px 2px;
   box-sizing: border-box;
+  
 
 }
         /* Banner wrapper (positioning context for overlay content) */
 
 .banner-wrap{
   position: relative;
-  width: min(100%, 1200px);  
+  width: 100%;  
   margin: 0 auto;  
 }
 
@@ -148,7 +148,7 @@ body {
                              /* Banner-Text */
   
   
-                             .banner-text{
+  .banner-text{
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -197,11 +197,11 @@ body {
 /*--------------------------------------------------------------------------- */
                            
 
-                             /* TABLET – 768px - 1023px */
+                             /* TABLET – 768px  */
 
  
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px)  {
 
                                /* Main-container */
   .main-container{
@@ -211,7 +211,7 @@ body {
   .banner-wrap{
     display: flex;
     align-items: stretch;
-    height: clamp(250px, 28vw, 290px);
+    height: clamp(260px, 28vw, 300px);
 
     border: 1px solid rgba(36, 36, 36, 0.12);
     box-shadow: 0 8px 16px rgba(198, 197, 197, 0.5);
@@ -243,7 +243,7 @@ body {
     flex: 0 0 60%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  
     order: 2;           
     border-radius: 0;
     border: 0;
@@ -268,7 +268,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    right: -70px;           
+    right: -80px;           
     width: 140px;
     height: 100%;
     background: #f3f1ee;    
@@ -278,21 +278,24 @@ body {
     pointer-events: none;
     
   }
-  .btn-order{
+  .btn-order
+  .btn-menu{
     
-    padding : 15px ;
-    font-size: 15px;
+    padding : 5px ;
+    font-size: 4px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.40);
     
   }
- 
-    
   
-
+ /* Banner buttons hover */
+.btn-order:hover,
+.btn-menu:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
   
 
-
+}
                                /* End*/
 /*-------------------------------------------------------------------------- */
                              /* Desktop-1024px */
@@ -373,28 +376,110 @@ body {
   }
 
    .main-container{
-    
-    padding-top: 5px;
+    width: 90%;
+    padding-top: 3px;
    }
 
-  .banner-image{
-   
-   max-height: 250px;
-
+  
+                      /* Main - Desktop */
+.banner-wrap{
+    height: clamp(250px, 22vw, 260px);
   }
+.banner-text h1 {
+    font-size: 40px;   
+    line-height: 1.2;
+  }
+
+.btn-order
+.btn-menu
+{
+    
+    padding : 12px ;
+    font-size: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.40);
+    font-weight: 800;
+  }
+
   
 
-
-                                        /* End*/
+                     /* End */
+                                
 }
+                                   
+/* ..............................Laptop 1440px ........................................................*/
+                   /* Large desktop 1440+ */
+@media (min-width: 1440px){
+  .banner-wrap{ height: clamp(250px, 20vw, 260px); }
+
+.main-container{
+  width: 90%;
+}
+
+.btn-order,
+.btn-menu{
+  padding: 12px 15px;
+  font-size: 15px;
+}
+
+}
+                              /* End */
+
+ /*.......................  SCREEN – 2560px .......................*/
+
+
+@media (min-width: 2560px) {
+
+                       /* Header 2560px */
+.main-header {
+
+  height: 75px;
+
+ }
+.logo {
+  height: 50px;        
   
+}
+                    
+.header-tools {
+
+  gap: 20px;
+  
+}
+
+.icon-btn {
+  
+  font-size: 27px;
+}
+.menu  {
+  font-size: 25px;
+}
+.menu ul {
+  gap: 130px;
+ 
+}
 
 
 
-                                   
+                       /* Main – 2560px */
+  .main-container {
+    width: 85%;
+    max-width: 90%;
 
-                                   
-
-
-
-
+   
+  }
+  .banner-wrap {
+    height: clamp(340px, 18vw, 380px);
+  }
+  .banner-text h1 {
+    font-size: 60px;
+  }
+ .banner-buttons{
+    gap: 70px;
+  }
+  .btn-order,
+  .btn-menu {
+    padding: 15px 25px;
+    font-size: 25px;
+    border-radius: 25px;
+  }
+}
