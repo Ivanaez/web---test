@@ -44,14 +44,14 @@ body {
 .menu {
   position: fixed;
   inset : 0 auto 0 0;
-
-  width: 220px;
+  width: 70vw;
+  max-width: 320px;
   background-color: white;
   border-right: 1px solid #adadad;
   padding: 10px;
 
   transform: translateX(-110%);
-  transition: transform 0.25s ease;
+  transition: transform 0.500s ease;
 }
 
 .menu.open {
@@ -107,11 +107,10 @@ body {
                                /* Main Content */
 .main-content {
   flex: 1;
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-  background-position: center;
   display : flex;
   justify-content: center;
+
+  background: linear-gradient(#f6f6f6, #f3f3f3);
   
 }
 
@@ -129,6 +128,7 @@ body {
   position: relative;
   width: 100%;  
   margin: 0 auto;  
+   
 }
 
                                  /* Banner-Images */
@@ -141,7 +141,7 @@ body {
   object-position: center;
 
   border-radius: 20px;
-  border: 5px solid rgba(242, 242, 242, 0.12);
+  border: 2px solid rgba(242, 242, 242, 0.12);
   box-shadow: 0 10px 20px rgba(198, 197, 197, 0.5);
   overflow: hidden;
  }
@@ -165,31 +165,41 @@ body {
   flex-wrap: wrap;
 }
 .btn-order{
-  padding: 6px ;
-  background-color: #c90000;
+  padding: 8px 16px;
+  background-color: #DC3545;
   color: #fff;
   border: none;
   border-radius: 15px;
+  font-weight: 900;
   font-size: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 .btn-menu{
-  padding: 6px ;
-  background: rgba(255, 255, 255, 0.25); 
-  color: #222;
+  padding: 8px 16px; 
+  background-color: #28A745;
+  color: #ffffff;
   border: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border-radius: 15px;
   font-size: 14px;
   font-weight: 900;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
-                     
-
-
-
+         /* Banner buttons hover */
+  
+  .btn-order:hover
+   {
+    background-color:#E63946;
+    transform: translateY(-1px);
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+  }
+ .btn-menu:hover
+ {
+  background-color: #218838;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+ }
 
 
 
@@ -228,7 +238,11 @@ body {
     inset: auto;            
     flex: 0 0 40%;
     padding: 32px;
-    background: #f3f1ee;   
+    background-image: url("../img/backgroundText1.png");
+    background-repeat: no-repeat;
+    background-size: cover;      
+    background-position: center; 
+
     justify-content: center;
     gap: 14px;
     
@@ -269,29 +283,24 @@ body {
     position: absolute;
     top: 0;
     right: -80px;           
-    width: 140px;
+    width: 80px;
     height: 100%;
-    background: #f3f1ee;    
+    background-image: url("../img/backgroundText1.png");
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center;
+  
     transform: skewX(-12deg);
     transform-origin: left top;
     z-index: 0;
-    pointer-events: none;
-    
+    pointer-events: none;  
   }
-  .btn-order
+
+  .btn-order,
   .btn-menu{
     
-    padding : 5px ;
-    font-size: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.40);
-    
-  }
-  
- /* Banner buttons hover */
-.btn-order:hover,
-.btn-menu:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    padding : 13px 15px;
+    font-size: 9px;                         
 }
   
 
@@ -323,6 +332,7 @@ body {
 
                              /* Navigation Menu-desktop */
   .menu {
+    
     position: static;
     inset: auto;
     transform: none;
@@ -332,9 +342,6 @@ body {
     padding: 0;
     margin-left: auto;
     
-
-
-
   }
   .menu a {
     text-decoration: none;
@@ -345,6 +352,7 @@ body {
   .menu ul {
     display: flex;
     gap: 50px;
+    justify-content: center;
   }
   .menu li:hover {
  
@@ -382,22 +390,24 @@ body {
 
   
                       /* Main - Desktop */
+
+
 .banner-wrap{
     height: clamp(250px, 22vw, 260px);
+    border-radius: 25px;
   }
 .banner-text h1 {
     font-size: 40px;   
     line-height: 1.2;
   }
 
-.btn-order
+.btn-order,
 .btn-menu
-{
-    
+
+{ 
     padding : 12px ;
     font-size: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.40);
-    font-weight: 800;
+   font-weight: 700;
   }
 
   
@@ -483,3 +493,4 @@ body {
     border-radius: 25px;
   }
 }
+
