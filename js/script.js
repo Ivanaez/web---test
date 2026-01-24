@@ -28,3 +28,11 @@ document.addEventListener("click", (event) => {
       sideMenu.classList.remove("open");
     }
   });
+
+              // Close menu button handler
+  const menu = document.querySelector('.menu');
+const closeBtn = document.querySelector('.menu-close');
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('open');
+});
