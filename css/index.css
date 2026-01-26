@@ -45,7 +45,7 @@ body {
   position: fixed;
   inset: 0 auto 0 0;
   width: 70vw;
-  max-width: 320px;
+  max-width: 360px;
   background-color: white;
   border-right: 1px solid #adadad;
   transform: translateX(-110%);
@@ -139,7 +139,7 @@ body {
 .main-content {
   flex: 1;
   display : flex;
-  justify-content: center;
+  flex-direction: column;
 
   background: linear-gradient(#f6f6f6, #f3f3f3);
   
@@ -194,7 +194,14 @@ body {
   display: flex;
   gap: 17px;
   flex-wrap: wrap;
+  
 } 
+                          /* Banner buttons links */
+.banner-buttons a {
+
+  text-decoration: none;
+}
+
                            /* Banner order button */
 .btn-order{
   padding: 8px 16px;
@@ -233,6 +240,45 @@ body {
   transform: translateY(-1px);
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
  }
+                          /* Popular wrapper container */
+ .popular-wrapper {
+  width:100%;
+  margin: 20px 0px 40px 0px;
+  background: #fc2a2a;
+  padding: 20px 20px 25px 20px;
+  
+  
+}           
+                          /* Popular text-h2,p */                 
+ .popular-text{
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ /* Popular cards wrapper:  horizontal scroll */
+.popular-cards {
+  display: flex;
+  gap: 15px;              
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+  scroll-snap-type: x mandatory;
+  
+   /* hide scrollbar */
+   scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / Edge old */
+  
+   
+}
+                              /* Pizza card */
+.pizza-card {
+  flex: 0 0 260px;
+  min-width: 360px;
+  height: 200px;
+  scroll-snap-align: start;
+  height: 200px;
+  background-color: #8f3e3e;
+  border-radius: 15px;
+}
+
                           /* Footer – */
 .main-footer {
   background: linear-gradient(#ffffff, #eaeaea);
@@ -342,6 +388,34 @@ body {
  
 
 @media (min-width: 768px)  {
+ 
+                            /* Menu width - tablet-768px */
+  .menu {
+    width: 80vw;
+    max-width: 520px;
+  }
+                             /* Close menu button - 768px */
+  .menu-close {
+    font-size: 26px;
+  }
+                               /* Menu icons - 768px */
+   .menu a i {
+  font-size: 22px;      
+  width: 25px;          
+  
+}
+                          /* Menu list container - 768px */
+.menu ul {
+  
+   margin-top: 80px;
+}
+                         /* Menu list items - 768px */
+.menu li {
+ padding: 20px 20px;
+ 
+   
+}
+
 
                                /* Main-container - 768px */
   .main-container{
@@ -370,7 +444,7 @@ body {
     padding: 32px;
     justify-content: center;
     gap: 14px;
-    color: #010101;
+   color: #2b2b2b;
     order: 1;               
       
   }
@@ -471,8 +545,8 @@ body {
 
   }
 
-
 }
+
                                /* End*/
 /*-------------------------------------------------------------------------- */
                              /* Desktop-1024px */
@@ -526,6 +600,7 @@ body {
   }
 
   .menu ul {
+    margin-top: 0px;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -567,7 +642,10 @@ body {
   
                       /* Main - Desktop */
 
-
+.main-container
+{
+ margin: 0 auto;
+}
 .banner-wrap{
     height: clamp(250px, 22vw, 260px);
     border-radius: 25px;
