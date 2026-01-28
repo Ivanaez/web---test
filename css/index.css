@@ -9,7 +9,7 @@
 
                                   /* Page Settings */
 html {
-  overflow-x: hidden;
+  
   font-family: Arial, sans-serif;
 }
                                  /* Layout Container */
@@ -141,7 +141,12 @@ body {
   display : flex;
   flex-direction: column;
 
-  background: linear-gradient(#f6f6f6, #f3f3f3);
+ background-image: url("../img/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+ 
   
 }
 
@@ -172,7 +177,7 @@ body {
   object-position: center;
 
   border-radius: 20px;
-  border: 2px solid rgba(242, 242, 242, 0.12);
+  border: 2px solid lab(95.49% 0.01 -0.01 / 0.182);
   box-shadow: 0 10px 20px rgba(198, 197, 197, 0.5);
   overflow: hidden;
  }
@@ -243,21 +248,28 @@ body {
                           /* Popular wrapper container */
  .popular-wrapper {
   width:100%;
-  margin: 20px 0px 40px 0px;
-  background: #fc2a2a;
-  padding: 20px 20px 25px 20px;
+  margin: 10px 0px 80px 0px;
+  padding: 10px 0px 20px 20px;
   
   
+  
+    
 }           
                           /* Popular text-h2,p */                 
  .popular-text{
   text-align: center;
   margin-bottom: 20px;
  }
+ .popular-text h2 {
+  font-size: clamp(22px, 4vw, 32px);
+}
+.popular-text p {
+  font-size: clamp(14px, 2vw, 18px);
+}
  /* Popular cards wrapper:  horizontal scroll */
 .popular-cards {
   display: flex;
-  gap: 15px;              
+  gap: clamp(15px, 2vw, 40px);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; 
   scroll-snap-type: x mandatory;
@@ -265,23 +277,35 @@ body {
    /* hide scrollbar */
    scrollbar-width: none;          /* Firefox */
   -ms-overflow-style: none;       /* IE / Edge old */
-  
+ 
    
 }
+
                               /* Pizza card */
 .pizza-card {
-  flex: 0 0 260px;
-  min-width: 360px;
-  height: 200px;
+  flex: 0 0 clamp(260px, 70vw, 320px);
+  aspect-ratio: 3 / 2;
   scroll-snap-align: start;
-  height: 200px;
-  background-color: #8f3e3e;
-  border-radius: 15px;
+ background: linear-gradient(#f6f6f6, #f3f3f3);
+ 
+  border: 4px solid rgba(120, 120, 120, 0.12);
+  border-radius: 12px;
+  
 }
+                            /* Pizza card image */
+  .pizza-img {
+  width: 100%;
+  height: auto;       
+  object-fit: cover;   
+  border-radius: 12px;
+  display: block;
+  
+
+  }
 
                           /* Footer – */
 .main-footer {
-  background: linear-gradient(#ffffff, #eaeaea);
+  background-color: #ffffff;
   
 }
                          /* Footer container */
@@ -298,7 +322,6 @@ body {
 .footer-nav {
 
   display: flex;
-  justify-content: center;
   gap: clamp(16px, 4vw, 48px);
   margin: 5px;
   
@@ -430,7 +453,8 @@ body {
     box-shadow: 0 8px 16px rgba(198, 197, 197, 0.5);
     border-radius: 15px;
     overflow: hidden; 
-  background: linear-gradient(#ffffff, #eaeaea);
+    background: linear-gradient(#ffffff, #eaeaea);
+
 
 }
 
@@ -483,6 +507,7 @@ body {
     width: 80px;
     height: 100%;
     background: linear-gradient(#ffffff, #eaeaea);
+
     transform: skewX(-12deg);
     transform-origin: left top;
     z-index: 0;
@@ -497,6 +522,12 @@ body {
    font-size: 9px;   
 
 }
+                               /* Pizza card - 768px */
+.pizza-card {
+  flex: 0 0 clamp(280px, 35vw, 340px);
+  
+  
+}
                         /* Footer - 768px */
 
                         /* Footer Container -768px*/
@@ -507,6 +538,8 @@ body {
     row-gap: 14px;
     align-items: start;
     padding-top: 10px;
+
+   
 
   }      
                    /* Footer navigation links - 768px */
@@ -663,11 +696,14 @@ body {
     font-size: 12px;
    font-weight: 700;
   }
+ 
+           
+                      /* Pizza card - 1024px */
+.pizza-card{ 
+flex: 0 0 360px; 
+                               
+}
 
-  
-
-                     /* End */
-                                
 }
                                    
 /* ..............................Laptop 1440px ........................................................*/
@@ -684,10 +720,11 @@ body {
   padding: 12px 15px;
   font-size: 15px;
 }
+                        
 
-}
+
+}                        
                               /* End */
-
  /*.......................  SCREEN – 2560px .......................*/
 
 
@@ -725,6 +762,7 @@ body {
 
 
                        /* Main – 2560px */
+       
   .main-container {
     width: 85%;
     max-width: 90%;
@@ -746,5 +784,20 @@ body {
     font-size: 25px;
     border-radius: 25px;
   }
-}
+                    /* Popular wrapper - 2560px */
+.popular-wrapper {
+  
+  padding-bottom: 40px;
 
+}
+                       /* Pizza card - 2560px */
+.pizza-card{ 
+flex: 0 0 450px; 
+                              
+}
+                        /* Footer container - 2560px */
+ .footer-container{
+    width: min(92%, 1600px);
+  }
+
+}
