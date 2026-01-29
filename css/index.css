@@ -299,9 +299,72 @@ body {
   object-fit: cover;   
   border-radius: 12px;
   display: block;
-  
-
+   
   }
+                           /* Pizza divider */
+.pizza-divider{
+height:1px;
+background:rgba(0,0,0,0.08);
+margin:16px 20px;
+}
+                           /* Pizza content */
+  .pizza-content{
+   display:flex;
+   justify-content:space-between;
+   padding: 10px;
+   gap:6px;
+}            
+                            /* Pizza P */
+  .pizza-content p{
+    margin-top:30px;
+  
+  }
+                            /* Pizza actions container */
+  .pizza-actions{
+   display:flex;
+   gap:15px;
+   margin-top:5px;
+}
+                            /* Pizza action buttons */
+.pizza-actions .btn{
+padding:8px 25px;
+margin:0px 0px 15px 9px;
+font-size:14px;
+font-weight:600;
+border-radius:12px;
+border:none;
+outline:none;
+cursor:pointer;
+text-decoration:none;
+
+}
+                             /* Select button */
+.pizza-actions .btn-select{
+background: #1f3a5f;
+color:#fff;
+
+}
+                        /* Actions button */
+.pizza-actions .btn-details{
+ 
+  background:transparent;
+  color:#444;
+  border:1px solid #ccc;
+
+}
+                          /* Select button hover */
+.pizza-actions .btn-select:hover{
+background:#163e73; 
+
+}
+                          /* Details button hover */
+.pizza-actions .btn-details:hover{
+background:#f2f2f2;
+color:#222;
+
+}
+
+
 
                           /* Footer – */
 .main-footer {
@@ -703,6 +766,18 @@ body {
 flex: 0 0 360px; 
                                
 }
+                    /* Pizza card Image-1024px */
+.pizza-img {
+     transition: transform 200ms ease, filter 200ms ease;
+  
+  }
+
+               /* Pizza image hover effect - 1024px*/
+  .pizza-img:hover {
+  transform: translateY(-10px) scale(1.03);
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,0.18));
+
+                        
 
 }
                                    
@@ -799,5 +874,8 @@ flex: 0 0 450px;
  .footer-container{
     width: min(92%, 1600px);
   }
+
+}
+
 
 }
