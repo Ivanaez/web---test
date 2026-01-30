@@ -252,8 +252,6 @@ body {
   padding: 10px 0px 20px 20px;
   
   
-  
-    
 }           
                           /* Popular text-h2,p */                 
  .popular-text{
@@ -266,19 +264,28 @@ body {
 .popular-text p {
   font-size: clamp(14px, 2vw, 18px);
 }
+                            /* Popular slider container */
+     .popular-slider {
+  position: relative;
+}      
+                        /* Scroll buttons hidden by default */
+  .scroll-btn {
+  display: none;
+}
+
+
  /* Popular cards wrapper:  horizontal scroll */
 .popular-cards {
   display: flex;
   gap: clamp(15px, 2vw, 40px);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; 
-  scroll-snap-type: x mandatory;
+  
   
    /* hide scrollbar */
    scrollbar-width: none;          /* Firefox */
   -ms-overflow-style: none;       /* IE / Edge old */
  
-   
 }
 
                               /* Pizza card */
@@ -383,7 +390,7 @@ color:#222;
 }
                           /* Footer navigation */
 .footer-nav {
-
+  justify-content: center;
   display: flex;
   gap: clamp(16px, 4vw, 48px);
   margin: 5px;
@@ -762,6 +769,48 @@ color:#222;
  
            
                       /* Pizza card - 1024px */
+
+   
+                   /* Prevent image drag/select */
+  .popular-cards img {
+    -webkit-user-drag: none;   
+    user-select: none;         
+    -webkit-user-select: none; 
+    
+  }
+                 /* Disable text selection while dragging */
+.popular-cards.dragging {
+  user-select: none;
+  
+}
+                         /* Prevent link drag */
+.popular-cards a {
+  -webkit-user-drag: none;
+  
+}
+
+                          /* Scroll buttons - 1024px*/
+.scroll-btn {
+  position: absolute;
+  top: 30%;
+  z-index: 5;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+}
+                          /* scroll btn-left */
+.scroll-btn.left {
+  left: 8px;
+}
+                          /* scroll btn-right */
+.scroll-btn.right {
+  right: 8px;
+}
+                          /* Pizza card size-1024px */
 .pizza-card{ 
 flex: 0 0 360px; 
                                
@@ -776,9 +825,16 @@ flex: 0 0 360px;
   .pizza-img:hover {
   transform: translateY(-10px) scale(1.03);
   filter: drop-shadow(0 12px 18px rgba(0,0,0,0.18));
-
                         
+}
 
+                            /* Footer container - 1024px */
+.footer-container {
+ 
+  max-width: min(90vw,2600px);
+  
+ 
+}
 }
                                    
 /* ..............................Laptop 1440px ........................................................*/
@@ -795,10 +851,13 @@ flex: 0 0 360px;
   padding: 12px 15px;
   font-size: 15px;
 }
-                        
+    /* Pizza card - 1440px */
+.pizza-card{ 
+flex: 0 0 380px;                       
 
 
-}                        
+}         
+}               
                               /* End */
  /*.......................  SCREEN – 2560px .......................*/
 
@@ -870,12 +929,8 @@ flex: 0 0 360px;
 flex: 0 0 450px; 
                               
 }
-                        /* Footer container - 2560px */
- .footer-container{
-    width: min(92%, 1600px);
-  }
-
+                       
 }
 
 
-}
+
