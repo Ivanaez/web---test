@@ -1,0 +1,64 @@
+/* page centering */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login box */
+.box {
+  width: 100%;
+  max-width: 260px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+}
+
+/* form labels */
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* form inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* submit button */
+.box button {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* button hover */
+.box button:hover {
+  opacity: 0.9;
+}
+
+/* message text */
+#message {
+  margin-top: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* desktop layout */
+@media (min-width: 768px) {
+  .box {
+    max-width: 320px;
+  }
+}
