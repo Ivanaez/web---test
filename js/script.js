@@ -1,18 +1,4 @@
-const nameInput = document.getElementById("userName");
-const ageInput = document.getElementById("userAge");
-const btn = document.getElementById("submitBtn");
-const message = document.getElementById("message");
 
-
-if (btn) {
-  btn.addEventListener("click", function () {
-    message.textContent = "You have successfully added the data. Thank you.";
-
-  });
-}
-
-const menuToggle = document.querySelector(".button-toggle");
-const sideMenu = document.querySelector(".menu");
 
 if (menuToggle && sideMenu) {
   menuToggle.addEventListener("click", () => {

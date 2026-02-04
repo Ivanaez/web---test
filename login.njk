@@ -3,17 +3,57 @@ layout: layouts/blank.njk
 title: Login
 permalink: /login.html
 ---
+                     <!-- Login container -->
+<div class="login">
+                     <!-- Logo image -->
+  <img class="logo" src="/img/logo.png" alt="PizzaHub logo">
 
-<main class="page-center">
-  <div class="box">
-    <label for="userName">Name:</label>
-    <input type="text" id="userName" placeholder="Enter name">
+                <!-- Text wrapper container -->
+<div class="login-text">
 
-    <label for="userAge">Age:</label>
-    <input type="number" id="userAge" placeholder="Enter age">
+                      <!-- Text-h1 -->
+  <h1 class="title">Sign in to your account</h1>
 
-    <button id="submitBtn">Submit</button>
+                     <!-- Text-p -->
+  <p class="sub-title">Glad to see you again.</p>
 
-    <p id="message"></p>
+</div>
+<!-- Login container -->
+<div class="login-container">
+
+    <!-- Email input -->
+  <div class="email">
+
+        <!-- email span icon -->
+    <span class="input-icon left">
+     <i class="fa-regular fa-envelope"></i>
+    </span>
+
+     <!-- email input field -->
+    <input type="email" placeholder="Email">
   </div>
-</main>
+
+        <!-- Password input -->
+  <div class="password">
+
+                 <!-- lock span icon -->
+    <span class="input-icon left">
+     <i class="fa-solid fa-lock"></i>
+    </span>
+      
+    <input type="password" placeholder="Password">
+                    <!-- eye span icon -->
+    <span class="input-icon right">
+        <i class="fa-regular fa-eye"></i>
+    </span>
+    
+  </div>
+
+     <a class="forgot-password" href="/forgot-password/">Forgot password?</a>
+
+</div><!-- Login container </div> -->
+
+
+</div>
+
+
