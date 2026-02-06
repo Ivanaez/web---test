@@ -3,6 +3,10 @@ layout: layouts/blank.njk
 title: Login
 permalink: /login.html
 ---
+
+<!-- Auth card wrapper (styled in desktop breakpoint) -->
+<div class="auth-card">
+  
                      <!-- Login container -->
 <div class="login">
                      <!-- Logo image -->
@@ -12,10 +16,10 @@ permalink: /login.html
 <div class="login-text">
 
                       <!-- Text-h1 -->
-  <h1 class="title">Sign in to your account</h1>
+  <h1 class="title">Sign in </h1>
 
                      <!-- Text-p -->
-  <p class="sub-title">Glad to see you again.</p>
+  <p class="sub-title">Join us and make your next order easier.</p>
 
 </div>
 <!-- Login container -->
@@ -58,13 +62,29 @@ permalink: /login.html
 
                     <!-- Secondary section -->
 <div class="secondary">
-  
+
                   <!-- text new here -->
 <p class="new-here"><span>New here?</span></p>
-  
-  
-    
 
+<!-- Create account link (leads to account creation page) -->
+<a href="/ Create Account /" class="link-btn create-account">
+    Create Account
+  </a>
+
+<!-- Divider between account creation and guest access -->
+  <div class="or-divider"><span>Or</span></div>
+  
+<!-- Continue without creating an account -->
+   <a href="/guest/" class="link-btn guest">
+    Continue as Guest
+  </a>
+
+<!-- Security and privacy information -->
+  <p class="security-text">
+    We never share your data · <span>Secure login</span>
+  </p>
+
+</div>
 </div>
 </div>
 
