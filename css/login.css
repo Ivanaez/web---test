@@ -84,7 +84,21 @@ body {
   font-weight: 600;
   text-shadow: var(--text-shadow);
 }
+                         /* Visually hidden content:
+   Hides the element visually but keeps it accessible
+   for screen readers and form semantics (accessibility). */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
                                  /* login container */
 .login-container {
@@ -137,6 +151,9 @@ position: relative;
 .input-icon.right {
   right: 14px;
   cursor: pointer;
+  background:none;
+  border:none;
+  outline: none;
 }
                      /* Forgot password link */
 .forgot-password{

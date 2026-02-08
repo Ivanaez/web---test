@@ -1,4 +1,5 @@
-
+const menuToggle = document.querySelector(".button-toggle");
+const sideMenu = document.querySelector(".menu");
 
 if (menuToggle && sideMenu) {
   menuToggle.addEventListener("click", () => {
