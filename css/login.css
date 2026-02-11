@@ -135,6 +135,13 @@ position: relative;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   
 } 
+                         /* focus state */
+.email input:focus,
+.password input:focus {
+  border-color: #d32f2f;
+  outline: none;
+ 
+}
                        /* Input icon base */
 .input-icon {
   position: absolute;
@@ -146,6 +153,7 @@ position: relative;
                        /* Input icon left */
 .input-icon.left {
   left: 15px;
+  color:#555;
 }
                       /* Input icon right */
 .input-icon.right {
@@ -154,7 +162,28 @@ position: relative;
   background:none;
   border:none;
   outline: none;
+  color:#555;
 }
+                     /* eye icon right-hiden  */
+.eye-icon-hidden {
+display:none;
+
+}
+                 /* password error message   */
+.error {
+  margin:0;
+  color: #d32f2f;
+  font-size:clamp(14px,2vw,16px) ;
+  margin-top:5px;
+}
+             /*  password error message-hidden */
+.hidden{
+  display: none;
+}
+
+
+
+
                      /* Forgot password link */
 .forgot-password{
   display: inline-block;
@@ -165,6 +194,8 @@ position: relative;
   transition: opacity 0.2s ease;
   font-weight: 500;
   text-shadow: var(--text-shadow);
+
+ 
 }
                       /* Forgot password hover */
  @media (hover: hover) {                
