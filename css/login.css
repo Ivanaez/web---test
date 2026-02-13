@@ -138,7 +138,7 @@ position: relative;
                          /* focus state */
 .email input:focus,
 .password input:focus {
-  border-color: #d32f2f;
+  border-color: #ef5f5f;
   outline: none;
  
 }
@@ -172,8 +172,9 @@ display:none;
                  /* password error message   */
 .error {
   margin:0;
-  color: #d32f2f;
-  font-size:clamp(14px,2vw,16px) ;
+  color:#ae3636;
+  font-weight: 500;
+  font-size:clamp(16px,2vw,20px) ;
   margin-top:5px;
 }
              /*  password error message-hidden */
@@ -236,9 +237,13 @@ display:none;
   }
 }
 
+.login-btn:disabled{
+opacity: 0.55;
+cursor:not-allowed;
+filter:grayscale(20%)
+}
 
-
-/* Secondary section - New here text */
+/* Secondary section - (New here) text */
 .new-here {
   display:flex;
  align-items: center;
@@ -251,7 +256,7 @@ display:none;
  text-shadow: var(--text-shadow);
 }
 
-               /*  New here text -before,after */
+               /*  (New here) text -before,after */
 .new-here::before,
 .new-here::after {
   content: "";
